@@ -1,0 +1,17 @@
+:root {
+    --gutter: 1.875rem;
+};
+
+$breakpoints: (
+    sm: (334.98px, 6, 1.25rem),
+    md: (709.98px, 12, 1.875rem),
+    xl: (1069.98px, 12, 1.875rem)
+);
+
+$container-padding: 10px;
+
+$containers: (
+    sm: 334.98px,
+    md: 709.98px,
+    xl: 1069.98px
+);

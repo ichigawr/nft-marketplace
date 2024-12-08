@@ -1,0 +1,30 @@
+@mixin responsive-container($breakpoint, $width, $gutter) {
+    @media screen and (min-width: $width) {
+        .container {
+            --container-width: $width;
+            --gutter: $gutter;
+        }
+    }
+}
+
+@mixin display-utilities($breakpoint, $value) {
+    .d-#{$breakpoint}-#{$value} {
+        display: $value;
+    }
+}
+
+@mixin generate-columns($breakpoint, $count) {
+    @for $i from 1 through $count {
+        .col-#{$breakpoint}-#{$i} {
+            --column-size: $i;
+        }
+    }
+}
+
+@mixin generate-offsets($breakpoint, $count) {
+    @for $i from 1 through $count {
+        .offset-#{$breakpoint}-#{$i} {
+            margin-left: calc(#{$i} * (100% / 12));
+        }
+    }
+}
