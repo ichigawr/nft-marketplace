@@ -53,12 +53,21 @@ main {
     font-size: 1rem;
 }
 
+.caption {
+    font-size: 0.75rem;
+    line-height: 1.1;
+}
+
 a, p {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.6;
 }
 
 a:has(> img):not(:has(> span)) {
     font-size: 0;
     line-height: 0;
+}
+
+p[class^="h"] {
+    line-height: 1.4;
 }
