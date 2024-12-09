@@ -1,6 +1,15 @@
-:root {
-    --gutter: 1.875rem;
-};
+$background: #2B2B2B;
+$background-secondary: #3B3B3B;
+$caption-label-text: #858584;
+$text: #fff;
+
+$call-to-action: #A259FF;
+
+$gradient-1: linear-gradient(101deg, #A259FF 13.57%, #FF6250 97.65%);
+$gradient-2: linear-gradient(128deg, #A259FF 49.75%, #377DF7 136.56%);
+
+$font-family: "Work Sans", sans-serif;
+$font-family-mono: "Space Mono", monospace;
 
 $breakpoints: (
     sm: (334.98px, 6, 1.25rem),
@@ -15,3 +24,11 @@ $containers: (
     md: 709.98px,
     xl: 1069.98px
 );
+
+:root {
+    --gutter: 30px;
+    --background: #{$background};
+    --background-secondary: #{$background-secondary};
+    --caption-label-text: #{$caption-label-text};
+    --text: #{$text};
+};

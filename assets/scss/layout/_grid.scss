@@ -11,6 +11,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    row-gap: 30px;
     margin-inline: calc(-0.5 * var(--gutter));
 
     [class^="col-"] {
