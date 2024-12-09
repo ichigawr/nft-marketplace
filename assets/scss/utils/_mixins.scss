@@ -1,8 +1,8 @@
 @mixin responsive-container($breakpoint, $width, $gutter) {
-    @media screen and (min-width: $width) {
+    @media screen and (min-width: #{$width}) {
         .container {
-            --container-width: $width;
-            --gutter: $gutter;
+            --container-width: #{$width};
+            --gutter: #{$gutter};
         }
     }
 }
@@ -13,10 +13,28 @@
     }
 }
 
+@mixin generate-default-columns($count) {
+    @for $i from 1 through $count {
+        .col-#{$i} {
+            --col-size: #{$i};
+            --col-count: #{$count};
+        }
+    }
+}
+
 @mixin generate-columns($breakpoint, $count) {
     @for $i from 1 through $count {
         .col-#{$breakpoint}-#{$i} {
-            --column-size: $i;
+            --column-size: #{$i};
+            --column-count: #{$count};
+        }
+    }
+}
+
+@mixin generate-default-offsets($count) {
+    @for $i from 1 through $count {
+        .offset-#{$i} {
+            margin-left: calc($i * (100% / $count));
         }
     }
 }
@@ -24,7 +42,7 @@
 @mixin generate-offsets($breakpoint, $count) {
     @for $i from 1 through $count {
         .offset-#{$breakpoint}-#{$i} {
-            margin-left: calc(#{$i} * (100% / 12));
+            margin-left: calc($i * (100% / $count));
         }
     }
 }

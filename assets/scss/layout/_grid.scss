@@ -1,10 +1,11 @@
-@import "../utils/variables";
+@use "../utils/variables" as var;
 @import "../utils/mixins";
 
 .container {
+    width: 100%;
     max-width: var(--container-width);
     margin-inline: auto;
-    padding-inline: $container-padding;
+    padding-inline: var.$container-padding;
 }
 
 .row {
@@ -12,14 +13,17 @@
     flex-wrap: wrap;
     margin-inline: calc(-0.5 * var(--gutter));
 
-    > * {
+    [class^="col-"] {
         flex: 0 0 auto;
-        width: calc(var(--column-size) * (100% / 12));
+        width: calc(var(--col-size) * (100% / var(--col-count)));
         padding-inline: calc(var(--gutter) * 0.5);
     }
 }
 
-@each $breakpoint, $settings in $breakpoints {
+@include generate-default-columns(12);
+@include generate-default-offsets(11);
+
+@each $breakpoint, $settings in var.$breakpoints {
     $width: nth($settings, 1);
     $col-count: nth($settings, 2);
     $gutter: nth($settings, 3);
