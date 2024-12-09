@@ -1,0 +1,64 @@
+@use "../utils/variables" as var;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var.$font-family;
+    color: var.$text;
+    font-style: normal;
+    font-weight: 400;
+}
+
+main {
+    text-transform: capitalize;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.h1 {
+    font-size: 4.1875rem;
+}
+
+.h2 {
+    font-size: 3.1875rem;
+}
+
+.h3 {
+    font-size: 2.375rem;
+    line-height: 1.2;
+}
+
+.h4 {
+    font-size: 1.75rem;
+}
+
+.h5 {
+    font-size: 1.375rem;
+}
+
+.h6 {
+    font-size: 1rem;
+}
+
+a, p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+a:has(> img):not(:has(> span)) {
+    font-size: 0;
+    line-height: 0;
+}
