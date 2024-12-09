@@ -25,8 +25,8 @@
 @mixin generate-columns($breakpoint, $count) {
     @for $i from 1 through $count {
         .col-#{$breakpoint}-#{$i} {
-            --column-size: #{$i};
-            --column-count: #{$count};
+            --col-size: #{$i};
+            --col-count: #{$count};
         }
     }
 }
