@@ -1,0 +1,38 @@
+@use "../utils/variables" as var;
+
+[class^="btn--"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 50px;
+    border: 2px solid var.$call-to-action;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    img {
+        width: 20px;
+    }
+}
+
+.btn--primary-1,
+.btn--secondary-1,
+.btn--tertiary-1 {
+    background-color: var.$call-to-action;
+}
+
+.btn--primary-1,
+.btn--primary-2 {
+    height: 72px;
+}
+
+.btn--secondary-1,
+.btn--secondary-2 {
+    height: 60px;
+}
+
+.btn--tertiary-1,
+.btn--tertiary-2 {
+    height: 46px;
+}
