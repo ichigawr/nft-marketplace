@@ -84,10 +84,6 @@ section {
     .btn--primary-1 {
         height: 100px;
         padding: 0 15px;
-        // font-family: var.$font-family-mono;
-        // font-size: 22px;
-        // font-weight: 700;
-        // line-height: 1.6;
     }
 }
 
@@ -187,17 +183,13 @@ section {
 /* NFT Highlight: BEGIN */
 
 #nft-highlight {
+    align-items: flex-end;
     max-width: 1280px;
     margin-inline: auto;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#nft-highlight__inner {
-    align-items: flex-end;
     padding: 22.5rem 7.1875rem 3.75rem;
-    background: linear-gradient(180deg, #0000 0%, #a259ff 100%);
+    background:
+        linear-gradient(180deg, #0000 0%, #9747ff 100%),
+        url(../images/magic-mushroom-0324.png) lightgray 50% / cover no-repeat;
 }
 
 #nft-highlight__info {
