@@ -1,6 +1,17 @@
+@use "../utils/variables" as var;
+
+$header-height: 100px;
+
 header {
-    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: $header-height;
     padding-block: 20px;
+    background-color: var.$background;
+    border-bottom: 2px solid var.$background-secondary;
 }
 
 #header__nav-menu {
@@ -16,4 +27,8 @@ header {
     .btn--secondary-1 {
         padding-inline: 30px;
     }
+}
+
+main {
+    margin-top: $header-height;
 }
