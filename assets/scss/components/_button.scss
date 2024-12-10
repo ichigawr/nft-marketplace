@@ -1,19 +1,22 @@
 @use "../utils/variables" as var;
 
-[class^="btn--"] {
+[class*="btn--"] {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     padding: 0 3.125rem;
     border: 2px solid var.$call-to-action;
     border-radius: var.$border-rad;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.4;
 
     img {
         width: 20px;
     }
+}
+
+[class^="btn--"] {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .btn--primary-1,

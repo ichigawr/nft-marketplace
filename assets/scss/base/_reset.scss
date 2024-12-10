@@ -20,6 +20,12 @@ ul {
     list-style: none;
 }
 
+button {
+    color: inherit;
+    cursor: pointer;
+}
+
 body {
     background-color: #2b2b2b;
+    padding-inline: 10px;
 }
