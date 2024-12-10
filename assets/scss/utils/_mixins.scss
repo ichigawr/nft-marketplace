@@ -24,9 +24,11 @@
 
 @mixin generate-columns($breakpoint, $count) {
     @for $i from 1 through $count {
-        .col-#{$breakpoint}-#{$i} {
-            --col-size: #{$i};
-            --col-count: #{$count};
+        @media screen and (min-width: map-get(var.$containers, $breakpoint)) {
+            .col-#{$breakpoint}-#{$i} {
+                --col-size: #{$i};
+                --col-count: #{$count};
+            }
         }
     }
 }
@@ -41,8 +43,10 @@
 
 @mixin generate-offsets($breakpoint, $count) {
     @for $i from 1 through $count {
-        .offset-#{$breakpoint}-#{$i} {
-            margin-left: calc($i * (100% / $count));
+        @media screen and (min-width: map-get(var.$containers, $breakpoint)) {
+            .offset-#{$breakpoint}-#{$i} {
+                margin-left: calc($i * (100% / $count));
+            }
         }
     }
 }
