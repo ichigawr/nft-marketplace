@@ -4,10 +4,10 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 0 50px;
+    padding: 0 3.125rem;
     border: 2px solid var.$call-to-action;
-    border-radius: 20px;
-    font-size: 16px;
+    border-radius: var.$border-rad;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.4;
 
@@ -24,15 +24,15 @@
 
 .btn--primary-1,
 .btn--primary-2 {
-    height: 72px;
+    height: 4.5rem;
 }
 
 .btn--secondary-1,
 .btn--secondary-2 {
-    height: 60px;
+    height: 3.75rem;
 }
 
 .btn--tertiary-1,
 .btn--tertiary-2 {
-    height: 46px;
+    height: 2.875rem;
 }
