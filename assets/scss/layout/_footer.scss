@@ -1,0 +1,67 @@
+@use "../utils/variables" as var;
+
+footer {
+    padding-block: 2.5rem;
+    
+    .row {
+        padding-inline: calc(var(--col-width) * 0.5);
+    }
+
+    a,
+    small,
+    p:not(.h5--mono) {
+        color: #ccc;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .h5--mono {
+        line-height: 32px;
+    }
+
+    hr {
+        height: 1px;
+        margin-block: 1.875rem 1.25rem;
+        border: none;
+        background-color: var.$caption-label-text;
+    }
+}
+
+#footer__info {
+    > p {
+        margin-block: 1.5625rem 1.25rem;
+    }
+
+    > div {
+        p {
+            margin-bottom: 0.9375rem;
+        }
+
+        div {
+            gap: 0.625rem;
+        }
+    }
+}
+
+#footer__explore {
+    ul {
+        gap: 1.25rem;
+        margin-top: 1.5625rem;
+    }
+}
+
+#footer__subscribe .subscribe-form p {
+    margin-block: 1.5625rem 1.25rem;
+}
+
+@media screen and (min-width: map-get(var.$containers, xl)) {
+    #footer__info {
+        margin-left: calc(var(--gutter) * 0.5);
+        padding-left: calc(var(--gutter) * 1.5);
+        padding-right: var(--col-width);
+    }
+
+    #footer__subscribe {
+        margin-left: calc(-1 * var(--gutter));
+    }
+}

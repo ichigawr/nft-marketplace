@@ -11,7 +11,13 @@ header {
     height: $header-height;
     padding-block: 20px;
     background-color: var.$background;
-    border-bottom: 2px solid var.$background-secondary;
+    border-bottom: 1px solid var.$caption-label-text;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        height: fit-content;
+        padding-block: 5px;
+    }
 }
 
 #header__nav-menu {
