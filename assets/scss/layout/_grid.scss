@@ -5,18 +5,18 @@
     width: 100%;
     max-width: var(--container-width);
     margin-inline: auto;
-    padding-inline: var.$container-padding;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 30px;
+    row-gap: 1.875rem;
     margin-inline: calc(-0.5 * var(--gutter));
 
-    [class^="col-"] {
+    [class*="col-"] {
+        --col-width: calc(100% / var(--col-count));
         flex: 0 0 auto;
-        width: calc(var(--col-size) * (100% / var(--col-count)));
+        width: calc(var(--col-size) * var(--col-width));
         padding-inline: calc(var(--gutter) * 0.5);
     }
 }

@@ -14,21 +14,22 @@ $font-family-mono: "Space Mono", monospace;
 $border-rad: 20px;
 
 $breakpoints: (
-    sm: (334.98px, 6, 1.25rem),
-    md: (709.98px, 12, 1.875rem),
-    xl: (1069.98px, 12, 1.875rem)
+    sm: (314.98px, 6, 1.25rem),
+    md: (689.98px, 12, 1.875rem),
+    xl: (1049.98px, 12, 1.875rem)
 );
 
 $container-padding: 10px;
 
 $containers: (
-    sm: 334.98px,
-    md: 709.98px,
-    xl: 1069.98px
+    sm: 314.98px,
+    md: 689.98px,
+    xl: 1049.98px
 );
 
 :root {
     --gutter: 30px;
+    --col-width: 0;
     --background: #{$background};
     --background-secondary: #{$background-secondary};
     --caption-label-text: #{$caption-label-text};
