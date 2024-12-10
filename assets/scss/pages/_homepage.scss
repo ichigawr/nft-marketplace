@@ -1,0 +1,306 @@
+@use "../utils/variables" as var;
+
+section {
+    padding-block: 5rem;
+}
+
+[class*="artist-card"] {
+    img {
+        border-radius: 50%;
+    }
+}
+
+.section-headline {
+    align-items: flex-end;
+    gap: 100px;
+    margin-bottom: 3.75rem;
+
+    h2 {
+        margin-bottom: 0.625rem;
+    }
+}
+
+/* Hero: BEGIN */
+
+#hero__info {
+    h1 {
+        margin-bottom: 1.25rem;
+    }
+
+    a {
+        margin: 1.875rem 0;
+    }
+}
+
+#highlighted-nft__inner {
+    $info-card-height: 6.8125rem;
+
+    aspect-ratio: 1 / 1;
+
+    > a {
+        height: calc(100% - $info-card-height);
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+    }
+
+    > div {
+        height: $info-card-height;
+        padding: 20px;
+        border-radius: 0 0 var.$border-rad var.$border-rad;
+        background-color: var.$background-secondary;
+    }
+}
+
+/* Hero: END */
+
+/* Trending Collection: BEGIN */
+
+.trending-collection__card {
+    gap: 15px;
+
+    img {
+        border-radius: var.$border-rad;
+    }
+
+    > a img {
+        height: 330px;
+    }
+
+    h3 {
+        line-height: 1.4;
+    }
+}
+
+.additional-cards {
+    img {
+        height: 100px;
+    }
+
+    .btn--primary-1 {
+        height: 100px;
+        padding: 0 15px;
+        // font-family: var.$font-family-mono;
+        // font-size: 22px;
+        // font-weight: 700;
+        // line-height: 1.6;
+    }
+}
+
+/* Trending Collection: END */
+
+/* Top Creators: BEGIN */
+
+.artist-card {
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    padding: 1.25rem;
+    border-radius: var.$border-rad;
+    background-color: var.$background-secondary;
+    font-size: 1rem;
+
+    img {
+        width: 120px;
+    }
+
+    p.h5 {
+        margin-bottom: 0.3125rem;
+    }
+
+    p.d-flex {
+        gap: 10px;
+        font-size: inherit;
+        line-height: 1.4;
+
+        span:first-child {
+            color: var.$caption-label-text;
+        }
+    }
+}
+
+.ranking-number {
+    position: absolute;
+    top: 1.125rem;
+    left: 1.25rem;
+    width: 1.875rem;
+    padding-block: 4px;
+    border-radius: 50%;
+    background-color: var.$background;
+    font-family: var.$font-family-mono;
+    line-height: 1.4;
+    text-align: center;
+    color: var.$caption-label-text;
+}
+
+@media screen and (min-width: map-get(var.$containers, xl)) {
+    .artist-card p.h5 {
+        text-align: center;
+    }
+}
+
+/* Top Creators: END */
+
+/* Browse Categories: BEGIN */
+
+.category-card {
+    p {
+        padding: 1.25rem 1.875rem 1.5625rem;
+        border-radius: 0 0 var.$border-rad var.$border-rad;
+        background-color: var.$background-secondary;
+    }
+}
+
+.category-image-wrapper {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    border-radius: var.$border-rad var.$border-rad 0px 0px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: overlay;
+
+    div {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        backdrop-filter: blur(7.5px);
+    }
+}
+
+/* Browse Categories: END */
+
+/* Discover More NFTs: BEGIN */
+
+#discover-more-nfts .nft-card__info {
+    background-color: var.$background-secondary;
+}
+
+/* Discover More NFTs: END */
+
+/* NFT Highlight: BEGIN */
+
+#nft-highlight {
+    max-width: 1280px;
+    margin-inline: auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nft-highlight__inner {
+    align-items: flex-end;
+    padding: 22.5rem 7.1875rem 3.75rem;
+    background: linear-gradient(180deg, #0000 0%, #a259ff 100%);
+}
+
+#nft-highlight__info {
+    .artist-card--small {
+        padding: 0.625rem 1.25rem;
+        border-radius: var.$border-rad;
+        background-color: var.$background-secondary;
+    }
+
+    h2 {
+        margin-block: 1.875rem;
+    }
+
+    [class*="btn--"] {
+        $btn-color: #fff;
+        border-color: $btn-color;
+        background-color: $btn-color;
+        color: var.$background;
+    }
+}
+
+#nft-highlight__auction-timer {
+    padding: 30px;
+    border-radius: var.$border-rad;
+    background-color: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+
+    .d-flex {
+        gap: 0.625rem;
+        margin-top: 0.625rem;
+    }
+
+    .time-unit {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* NFT Highlight: END */
+
+/* How It Works: BEGIN */
+
+#how-it-works {
+    .section-headline {
+        margin-bottom: 3rem;
+    }
+}
+
+.how-it-works__info-card {
+    align-content: flex-start;
+    height: 100%;
+    padding: 0.625rem 1.875rem 1.875rem;
+    border-radius: var.$border-rad;
+    background-color: var.$background-secondary;
+
+    img {
+        width: 15.625rem;
+    }
+
+    .card-details {
+        text-transform: none;
+
+        h3 {
+            line-height: 1.4;
+            margin-bottom: 0.625rem;
+        }
+    }
+}
+
+@media screen and (min-width: map-get(var.$containers, md)) {
+    .how-it-works__info-card {
+        gap: 1.25rem;
+    }
+
+    .card-details {
+        text-align: center;
+    }
+}
+
+/* How It Works: END */
+
+/* Subscribe Widget: BEGIN */
+
+#subscribe-widget {
+    gap: 5rem;
+    margin-block: 2.5rem 5rem;
+    padding: 3.75rem;
+    background-color: var.$background-secondary;
+
+    &,
+    img {
+        border-radius: var.$border-rad;
+    }
+
+    > * {
+        flex: 1 0 0;
+    }
+
+    > img {
+        height: 19.375rem;
+        object-fit: cover;
+    }
+}
+
+/* Subscribe Widget: END */
