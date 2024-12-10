@@ -1,0 +1,76 @@
+@use "../utils/variables" as var;
+
+.nft-card {
+    display: flex;
+    flex-direction: column;
+    font-family: var.$font-family-mono;
+
+    > a img {
+        width: 100%;
+        height: 18.4375rem;
+        border-radius: var.$border-rad var.$border-rad 0 0;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+        font-family: var.$font-family;
+        line-height: 1.4;
+    }
+}
+
+.nft-card__info {
+    padding: 1.25rem 1.875rem 1.5625rem;
+    border-radius: 0 0 var.$border-rad var.$border-rad;
+    background-color: var.$background;
+}
+
+.artist-card--small {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    margin-top: 0.625rem;
+
+    img {
+        width: 24px;
+    }
+
+    a + a {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+.nft-card__info__artist {
+    margin-bottom: 1.5625rem;
+
+    .artist-card--small {
+        margin-top: 0;
+    }
+
+    a {
+        display: inline-block;
+    }
+}
+
+.nft-card__info__additional {
+    p {
+        gap: 8px;
+
+        span:first-child {
+            font-size: 0.75rem;
+            line-height: 1.1;
+            color: var.$caption-label-text;
+        }
+
+        span + span {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+
+    p + p {
+        text-align: right;
+    }
+}

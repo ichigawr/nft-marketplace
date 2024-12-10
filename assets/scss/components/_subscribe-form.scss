@@ -1,0 +1,26 @@
+@use "../utils/variables" as var;
+
+.subscribe-form {
+    p {
+        margin-block: 0.625rem 2.5rem;
+    }
+
+    div {
+        display: flex;
+        gap: 12px;
+        width: fit-content;
+        height: fit-content;
+        padding-left: 1.25rem;
+        border-radius: var.$border-rad;
+        background-color: #fff;
+    }
+
+    input {
+        border: none;
+    }
+
+    input,
+    input::placeholder {
+        color: var.$background;
+    }
+}
