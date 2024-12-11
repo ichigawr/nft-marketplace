@@ -217,24 +217,6 @@ section {
     }
 }
 
-#nft-highlight__auction-timer {
-    padding: 30px;
-    border-radius: var.$border-rad;
-    background-color: rgba(59, 59, 59, 0.5);
-    backdrop-filter: blur(5px);
-
-    .d-flex {
-        gap: 0.625rem;
-        margin-top: 0.625rem;
-    }
-
-    .time-unit {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-}
-
 /* NFT Highlight: END */
 
 /* How It Works: BEGIN */
