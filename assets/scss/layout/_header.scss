@@ -13,8 +13,8 @@ header {
     background-color: var.$background;
     border-bottom: 1px solid var.$caption-label-text;
     transition:
-        height $trans-settings,
-        padding-block $trans-settings;
+        height var.$trans-settings,
+        padding-block var.$trans-settings;
 
     &.scrolled {
         height: fit-content;
