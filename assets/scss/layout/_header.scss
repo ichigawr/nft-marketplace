@@ -12,7 +12,9 @@ header {
     padding-block: 20px;
     background-color: var.$background;
     border-bottom: 1px solid var.$caption-label-text;
-    transition: all 0.3s ease;
+    transition:
+        height $trans-settings,
+        padding-block $trans-settings;
 
     &.scrolled {
         height: fit-content;
