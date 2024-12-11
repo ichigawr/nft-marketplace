@@ -174,8 +174,14 @@ section {
 
 /* Discover More NFTs: BEGIN */
 
-#discover-more-nfts .nft-card__info {
-    background-color: var.$background-secondary;
+#discover-more-nfts {
+    .nft-cards-section {
+        background-color: var.$background;
+    }
+
+    .nft-card__info {
+        background-color: var.$background-secondary;
+    }
 }
 
 /* Discover More NFTs: END */

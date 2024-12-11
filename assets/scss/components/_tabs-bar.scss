@@ -1,0 +1,35 @@
+@use "../utils/variables" as var;
+
+.tabs-bar {
+    padding-top: 0.625rem;
+
+    button {
+        gap: 1rem;
+        flex: 1 0 0;
+        height: 60px;
+        padding-inline: 1.875rem;
+    }
+
+    .h5 {
+        color: var.$caption-label-text;
+    }
+
+    .base--mono {
+        padding: 0.3125rem 0.625rem;
+        border-radius: 20px;
+        background-color: var.$background-secondary;
+    }
+
+    .active {
+        border: 2px solid transparent;
+        border-bottom-color: var.$caption-label-text;
+
+        .h5 {
+            color: var.$text;
+        }
+
+        .base--mono {
+            background-color: var.$caption-label-text;
+        }
+    }
+}
