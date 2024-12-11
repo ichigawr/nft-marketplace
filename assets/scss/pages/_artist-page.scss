@@ -1,0 +1,91 @@
+@use "../utils/variables" as var;
+
+/* Cover and Profile images: BEGIN */
+
+#cover-profile-images {
+    height: 23.125rem;
+    padding: 0;
+
+    .container {
+        margin-top: -4.375rem;
+    }
+
+    img {
+        width: 120px;
+        outline: 2px solid var.$background;
+        border-radius: var.$border-rad;
+    }
+}
+
+#cover-profile-images__cover {
+    height: 20rem;
+    background:
+        linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747ff 95.31%),
+        url(../images/castle-in-fantasy.png) lightgray 50% / cover no-repeat;
+}
+
+/* Cover and Profile images: END */
+
+/* Artist Info: BEGIN */
+
+#artist-info {
+    gap: 6.25rem;
+    padding-block: 2.5rem;
+
+    + hr {
+        background-color: var.$background-secondary;
+    }
+}
+
+#artist-info__ctas {
+    gap: 1.25rem;
+
+    .btn--secondary-1 {
+        padding-inline: 1.4063rem;
+    }
+
+    .btn--secondary-2 {
+        padding-inline: 1.875rem;
+    }
+}
+
+#artist-info__info {
+    gap: 1.875rem;
+
+    .h5--mono {
+        padding-bottom: 0.625rem;
+        color: var.$caption-label-text;
+    }
+}
+
+#artist-info__stats {
+    gap: 1.25rem;
+    width: 31.875rem;
+
+    > * {
+        flex: 1 0 0;
+    }
+}
+
+#artist-info__web-links {
+    div {
+        gap: 0.625rem;
+    }
+
+    img {
+        width: 24px;
+        transition: filter var.$trans-settings;
+
+        &:hover {
+            filter: brightness(3);
+        }
+    }
+}
+
+@media screen and (min-width: map-get(var.$containers, xl)) {
+    #artist-info {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Artist Info: END */
