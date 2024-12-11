@@ -2,6 +2,8 @@
 
 footer {
     padding-block: 2.5rem;
+    border-top: 2px solid var.$background;
+    background-color: var.$background-secondary;
 
     a,
     small,
@@ -16,9 +18,7 @@ footer {
     }
 
     hr {
-        height: 1px;
         margin-block: 1.875rem 1.25rem;
-        border: none;
         background-color: var.$caption-label-text;
     }
 }

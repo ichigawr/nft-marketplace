@@ -4,8 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>NFT Marketplace</title>
+        <link rel="icon" href="assets/icons/storefront.svg" />
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
+
     <body>
         <header>
             <div class="container">
@@ -703,8 +705,8 @@
                     </a>
                 </div>
 
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 col-sm-3 nft-card">
+                <div class="row nft-cards-section">
+                    <div class="col-xl-4 col-6 nft-card">
                         <a href="pages/nft-page.html">
                             <img
                                 src="assets/images/distant-galaxy.png"
@@ -746,7 +748,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-4 col-md-6 col-sm-3 nft-card">
+                    <div class="col-xl-4 col-6 nft-card">
                         <a href="pages/nft-page.html">
                             <img
                                 src="assets/images/life-on-edena.png"
@@ -788,7 +790,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-4 col-md-6 col-sm-3 nft-card">
+                    <div class="col-xl-4 col-6 nft-card">
                         <a href="pages/nft-page.html">
                             <img
                                 src="assets/images/astro-fiction.png"
@@ -986,105 +988,113 @@
             </div>
         </main>
 
-        <footer class="container">
-            <div class="row">
-                <div
-                    id="footer__info"
-                    class="col-xl-3 col-md-12 col-sm-6 d-flex flex-col"
-                >
-                    <a href="index.html">
-                        <img src="assets/icons/logo.svg" alt="Logo" />
-                    </a>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div
+                        id="footer__info"
+                        class="col-xl-3 col-md-12 col-sm-6 d-flex flex-col"
+                    >
+                        <a href="index.html">
+                            <img src="assets/icons/logo.svg" alt="Logo" />
+                        </a>
 
-                    <p>NFT Marketplace UI created with Anima for Figma.</p>
+                        <p>NFT Marketplace UI created with Anima for Figma.</p>
 
-                    <div>
-                        <p>Join our community</p>
-                        <div class="d-flex">
-                            <a href="https://discord.com/" target="_blank">
-                                <img
-                                    src="assets/icons/discord-logo.svg"
-                                    alt="Discord"
-                                />
-                            </a>
-                            <a href="https://www.youtube.com/" target="_blank">
-                                <img
-                                    src="assets/icons/youtube-logo.svg"
-                                    alt="Youtube"
-                                />
-                            </a>
-                            <a href="https://x.com/" target="_blank">
-                                <img
-                                    src="assets/icons/twitter-logo.svg"
-                                    alt="X (Twitter)"
-                                />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/"
-                                target="_blank"
-                            >
-                                <img
-                                    src="assets/icons/instagram-logo.svg"
-                                    alt="Instagram"
-                                />
-                            </a>
+                        <div>
+                            <p>Join our community</p>
+                            <div class="d-flex">
+                                <a href="https://discord.com/" target="_blank">
+                                    <img
+                                        src="assets/icons/discord-logo.svg"
+                                        alt="Discord"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.youtube.com/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="assets/icons/youtube-logo.svg"
+                                        alt="Youtube"
+                                    />
+                                </a>
+                                <a href="https://x.com/" target="_blank">
+                                    <img
+                                        src="assets/icons/twitter-logo.svg"
+                                        alt="X (Twitter)"
+                                    />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/"
+                                    target="_blank"
+                                >
+                                    <img
+                                        src="assets/icons/instagram-logo.svg"
+                                        alt="Instagram"
+                                    />
+                                </a>
+                            </div>
                         </div>
+                    </div>
+
+                    <div
+                        id="footer__explore"
+                        class="col-xl-3 col-md-6 col-sm-6 offset-xl-1"
+                    >
+                        <p class="h5--mono">Explore</p>
+
+                        <nav>
+                            <ul class="d-flex flex-col">
+                                <li>
+                                    <a href="pages/marketplace.html">
+                                        Marketplace
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pages/rankings.html">Rankings</a>
+                                </li>
+                                <li>
+                                    <a href="pages/connect-wallet.html">
+                                        Connect a wallet
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div
+                        id="footer__subscribe"
+                        class="col-xl-4 col-md-6 col-sm-6"
+                    >
+                        <p class="h5--mono">Join our weekly digest</p>
+
+                        <form action="" target="_blank" class="subscribe-form">
+                            <p>
+                                Get exclusive promotions & updates straight to
+                                your inbox.
+                            </p>
+
+                            <div>
+                                <input
+                                    type="email"
+                                    class="base"
+                                    placeholder="Enter your email here"
+                                />
+                                <button type="submit" class="btn--secondary-1">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
-                <div
-                    id="footer__explore"
-                    class="col-xl-3 col-md-6 col-sm-6 offset-xl-1"
-                >
-                    <p class="h5--mono">Explore</p>
+                <hr />
 
-                    <nav>
-                        <ul class="d-flex flex-col">
-                            <li>
-                                <a href="pages/marketplace.html">
-                                    Marketplace
-                                </a>
-                            </li>
-                            <li>
-                                <a href="pages/rankings.html">Rankings</a>
-                            </li>
-                            <li>
-                                <a href="pages/connect-wallet.html">
-                                    Connect a wallet
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div id="footer__subscribe" class="col-xl-4 col-md-6 col-sm-6">
-                    <p class="h5--mono">Join our weekly digest</p>
-
-                    <form action="" target="_blank" class="subscribe-form">
-                        <p>
-                            Get exclusive promotions & updates straight to your
-                            inbox.
-                        </p>
-
-                        <div>
-                            <input
-                                type="email"
-                                class="base"
-                                placeholder="Enter your email here"
-                            />
-                            <button type="submit" class="btn--secondary-1">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <small class="caption">
+                    Ⓒ NFT Marketplace. Use this template freely.
+                </small>
             </div>
-
-            <hr />
-
-            <small class="caption">
-                Ⓒ NFT Marketplace. Use this template freely.
-            </small>
         </footer>
 
         <script>
