@@ -1,0 +1,94 @@
+@use "../utils/variables" as var;
+
+/* Cover image: BEGIN */
+
+#nft-page__cover-image {
+    display: block;
+    height: 35rem;
+}
+
+/* Cover image: END */
+
+/* NFT Info: BEGIN */
+
+#nft-info {
+    gap: 9.375rem;
+    padding-block: 2.5rem;
+
+    .auction-timer button {
+        width: 100%;
+        margin-top: 1.875rem;
+    }
+}
+
+#nft-info__additional {
+    gap: 1.875rem;
+    flex: 1 0 0;
+
+    #nft-info__headline p,
+    .h5--mono {
+        color: var.$caption-label-text;
+    }
+
+    .h5--mono {
+        margin-bottom: 0.625rem;
+    }
+}
+
+#nft-info__created-by .artist-card--small {
+    margin: 0;
+}
+
+#nft-info__description {
+    text-transform: none;
+}
+
+#nft-info__details {
+    a {
+        gap: 0.625rem;
+
+        + a {
+            margin-top: 0.625rem;
+        }
+    }
+
+    img {
+        width: 32px;
+    }
+}
+
+#nft-info__tags {
+    gap: 1.25rem;
+
+    button {
+        padding-inline: 1.875rem;
+        border: none;
+        background-color: var.$background-secondary;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: map-get(var.$containers, md)) {
+    #nft-info {
+        flex-direction: row-reverse;
+    }
+}
+
+/* NFT Info: END */
+
+/* NFT Cards Section: BEGIN */
+
+#nft-page__nft-cards {
+    background-color: var.$background;
+    
+    .container > .d-flex {
+        gap: 6.25rem;
+        margin-bottom: 3.75rem;
+    }
+
+    .nft-card__info {
+        background-color: var.$background-secondary;
+    }
+}
+
+/* NFT Cards Section: END */

@@ -2,12 +2,14 @@
 
 [class*="btn--"] {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
     padding: 0 3.125rem;
     border: 2px solid var.$call-to-action;
     border-radius: var.$border-rad;
     background-color: transparent;
+    text-align: center;
 
     img {
         width: 20px;

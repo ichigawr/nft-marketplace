@@ -25,3 +25,9 @@
 .f-wrap {
     flex-wrap: wrap;
 }
+
+.large-img {
+    width: min(100%, 1280px);
+    margin-inline: auto;
+    object-fit: cover;
+}

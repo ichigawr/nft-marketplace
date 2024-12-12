@@ -1,6 +1,8 @@
 @use "../utils/variables" as var;
 
 .auction-timer {
+    width: 295px;
+    height: fit-content;
     padding: 30px;
     border-radius: var.$border-rad;
     background-color: rgba(59, 59, 59, 0.5);
@@ -9,6 +11,10 @@
     div {
         gap: 0.625rem;
         margin-top: 0.625rem;
+
+        > p {
+            flex: 1 0 0;
+        }
     }
 
     .time-unit {
