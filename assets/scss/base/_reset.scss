@@ -1,3 +1,5 @@
+@use "../utils/variables" as var;
+
 *,
 *::before,
 *::after {
@@ -28,9 +30,10 @@ button {
 }
 
 body {
-    background-color: #2b2b2b;
+    background-color: var.$background;
 }
 
 hr {
     height: 1px;
+    background-color: var.$background-secondary;
 }

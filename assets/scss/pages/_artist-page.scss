@@ -31,10 +31,6 @@
 #artist-info {
     gap: 6.25rem;
     padding-block: 2.5rem;
-
-    + hr {
-        background-color: var.$background-secondary;
-    }
 }
 
 #artist-info__ctas {
