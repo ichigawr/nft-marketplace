@@ -1,0 +1,49 @@
+@use "../utils/variables" as var;
+
+#create-account {
+    gap: 2.5rem;
+
+    > * {
+        flex: 1 0 0;
+    }
+}
+
+#create-account__cover-image {
+    background: url(../images/purple-space.png) lightgray 50% / cover no-repeat;
+}
+
+#create-account__form {
+    padding-block: 6.25rem;
+
+    form {
+        width: 28.75rem;
+    }
+
+    p {
+        margin-block: 1.25rem 2.5rem;
+    }
+
+    div.d-flex.flex-col {
+        gap: 0.9375rem;
+        width: 20.3125rem;
+
+        div {
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: var.$border-rad;
+            background-color: var.$text;
+        }
+    }
+
+    button {
+        margin-top: 0.9375rem;
+    }
+
+    input {
+        color: var.$background;
+    }
+
+    input::placeholder {
+        color: var.$caption-label-text;
+    }
+}
