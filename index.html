@@ -12,9 +12,28 @@
         <header>
             <div class="container">
                 <nav class="d-flex justify-between align-center">
-                    <a href="index.html"
-                        ><img src="assets/icons/logo.svg" alt="Logo" />
+                    <a href="index.html">
+                        <img src="assets/icons/logo.svg" alt="Logo" />
                     </a>
+
+                    <label for="open-side-bar" class="d-xl-none d-block">
+                        <input
+                            type="checkbox"
+                            name="open-side-bar"
+                            id="open-side-bar"
+                            class="d-none"
+                        />
+
+                        <svg viewBox="0 0 32 32">
+                            <path
+                                class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                            ></path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+
+                        <div class="overlay"></div>
+                    </label>
 
                     <ul id="header__nav-menu" class="d-flex align-center">
                         <li>
@@ -44,7 +63,9 @@
             <section id="hero" class="container">
                 <div class="row">
                     <div id="hero__info" class="col-6">
-                        <h1 class="h1">Discover digital art & Collect NFTs</h1>
+                        <h1 class="h1-xl h3-md h4-sm">
+                            Discover digital art & Collect NFTs
+                        </h1>
                         <p>
                             Discover, collect, and trade unique digital art from
                             over 20k NFT artists on NFT Marketplace.
@@ -295,7 +316,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">1</span>
+                            <span class="ranking-number base--mono">1</span>
                             <img
                                 src="assets/images/avatars/keepitreal.png"
                                 alt="Keepitreal"
@@ -315,7 +336,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">2</span>
+                            <span class="ranking-number base--mono">2</span>
                             <img
                                 src="assets/images/avatars/digi-lab.png"
                                 alt="DigiLab"
@@ -335,7 +356,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">3</span>
+                            <span class="ranking-number base--mono">3</span>
                             <img
                                 src="assets/images/avatars/gravity-one.png"
                                 alt="GravityOne"
@@ -355,7 +376,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">4</span>
+                            <span class="ranking-number base--mono">4</span>
                             <img
                                 src="assets/images/avatars/juanie.png"
                                 alt="Juanie"
@@ -375,7 +396,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">5</span>
+                            <span class="ranking-number base--mono">5</span>
                             <img
                                 src="assets/images/avatars/blue-whale.png"
                                 alt="BlueWhale"
@@ -395,7 +416,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">6</span>
+                            <span class="ranking-number base--mono">6</span>
                             <img
                                 src="assets/images/avatars/mr-fox.png"
                                 alt="MrFox"
@@ -415,7 +436,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">7</span>
+                            <span class="ranking-number base--mono">7</span>
                             <img
                                 src="assets/images/avatars/shroomie.png"
                                 alt="Shroomie"
@@ -435,7 +456,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">8</span>
+                            <span class="ranking-number base--mono">8</span>
                             <img
                                 src="assets/images/avatars/robotica.png"
                                 alt="Robotica"
@@ -455,7 +476,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">9</span>
+                            <span class="ranking-number base--mono">9</span>
                             <img
                                 src="assets/images/avatars/orbitian.png"
                                 alt="Orbitian"
@@ -475,7 +496,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">10</span>
+                            <span class="ranking-number base--mono">10</span>
                             <img
                                 src="assets/images/avatars/animakid.png"
                                 alt="Animakid"
@@ -495,7 +516,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">11</span>
+                            <span class="ranking-number base--mono">11</span>
                             <img
                                 src="assets/images/avatars/dotgu.png"
                                 alt="Dotgu"
@@ -515,7 +536,7 @@
                             href="pages/artist-page.html"
                             class="artist-card d-flex justify-center align-center"
                         >
-                            <span class="ranking-number">12</span>
+                            <span class="ranking-number base--mono">12</span>
                             <img
                                 src="assets/images/avatars/ghiblier.png"
                                 alt="Ghiblier"
@@ -834,7 +855,10 @@
                 </div>
             </section>
 
-            <div id="nft-highlight" class="d-flex justify-between f-wrap">
+            <div
+                id="nft-highlight"
+                class="large-container d-flex justify-between f-wrap"
+            >
                 <div id="nft-highlight__info">
                     <div class="artist-card--small">
                         <a href="pages/artist-page.html">
