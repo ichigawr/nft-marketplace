@@ -11,22 +11,32 @@ $gradient-2: linear-gradient(128deg, #A259FF 49.75%, #377DF7 136.56%);
 $trans-settings: ease 0.3s;
 
 $font-family: "Work Sans", sans-serif;
-$font-family-mono: "Space Mono", monospace;
+$font-family--mono: "Space Mono", monospace;
 
 $border-rad: 20px;
 
 $breakpoints: (
-    sm: (314.98px, 6, 1.25rem),
-    md: (689.98px, 12, 1.875rem),
-    xl: (1049.98px, 12, 1.875rem)
+    sm: 374.98px,
+    md: 833.98px,
+    xl: 1279.98px,
 );
 
-$container-padding: 10px;
+$settings: (
+    sm: (6, 1.25rem),
+    md: (12, 1.875rem),
+    xl: (12, 1.875rem)
+);
 
 $containers: (
-    sm: 314.98px,
-    md: 689.98px,
-    xl: 1049.98px
+    sm: 375px,
+    md: 834px,
+    xl: 1280px
+);
+
+$containers-padding: (
+    sm: 30px,
+    md: 72px,
+    xl: 115px
 );
 
 :root {

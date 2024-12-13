@@ -17,16 +17,11 @@
 
         input {
             flex: 1 0 0;
-            background-color: transparent;
             color: var.$text;
         }
 
         input::placeholder {
             color: var.$caption-label-text;
-        }
-
-        button {
-            font-size: 0;
         }
 
         img {

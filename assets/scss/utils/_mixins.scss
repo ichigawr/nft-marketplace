@@ -1,52 +1,156 @@
-@mixin responsive-container($breakpoint, $width, $gutter) {
-    @media screen and (min-width: #{$width}) {
+/* Grid system mixins: BEGIN */
+
+@mixin responsive-container($breakpoint, $breakpoint-width, $gutter) {
+    $container-width: map-get($containers, $breakpoint);
+    $container-pad: map-get($containers-padding, $breakpoint);
+
+    @media screen and (min-width: $breakpoint-width) {
         .container {
-            --container-width: #{$width};
+            --container-width: #{$container-width};
             --gutter: #{$gutter};
+            padding-inline: $container-pad;
+        }
+
+        .large-container {
+            width: min(100%, $container-width);
+            margin-inline: auto;
         }
     }
 }
 
-@mixin display-utilities($breakpoint, $value) {
-    .d-#{$breakpoint}-#{$value} {
-        display: $value;
+@mixin display-utilities($breakpoint, $breakpoint-width, $value) {
+    @media screen and (min-width: $breakpoint-width) {
+        .d-#{$breakpoint}-#{$value} {
+            display: $value;
+        }
     }
 }
 
-@mixin generate-default-columns($count) {
-    @for $i from 1 through $count {
+@mixin generate-default-columns($col-count) {
+    @for $i from 1 through $col-count {
         .col-#{$i} {
             --col-size: #{$i};
-            --col-count: #{$count};
+            --col-count: #{$col-count};
         }
     }
 }
 
-@mixin generate-columns($breakpoint, $count) {
-    @for $i from 1 through $count {
-        @media screen and (min-width: map-get(var.$containers, $breakpoint)) {
+@mixin generate-columns($breakpoint, $breakpoint-width, $col-count) {
+    @for $i from 1 through $col-count {
+        @media screen and (min-width: $breakpoint-width) {
             .col-#{$breakpoint}-#{$i} {
                 --col-size: #{$i};
-                --col-count: #{$count};
+                --col-count: #{$col-count};
             }
         }
     }
 }
 
-@mixin generate-default-offsets($count) {
-    @for $i from 1 through $count {
+@mixin generate-default-offsets($col-count) {
+    @for $i from 1 through $col-count {
         .offset-#{$i} {
-            margin-left: calc($i * (100% / $count));
+            margin-left: calc($i * (100% / $col-count));
         }
     }
 }
 
-@mixin generate-offsets($breakpoint, $count) {
-    @for $i from 1 through $count {
-        @media screen and (min-width: map-get(var.$containers, $breakpoint)) {
+@mixin generate-offsets($breakpoint, $breakpoint-width, $col-count) {
+    @for $i from 1 through $col-count {
+        @media screen and (min-width: $breakpoint-width) {
             .offset-#{$breakpoint}-#{$i} {
-                margin-left: calc($i * (100% / $count));
+                margin-left: calc($i * (100% / $col-count));
             }
         }
     }
 }
+
+/* Grid system mixins: END */
+
+/* Typography mixins: BEGIN */
+
+@mixin typo-utilities($breakpoint, $breakpoint-width) {
+    @media screen and (min-width: $breakpoint-width) {
+        @for $i from 1 through 6 {
+            .h#{$i}-#{$breakpoint} {
+                margin: 0;
+                font-weight: 600;
+            }
+
+            .h#{$i}-#{$breakpoint}--mono {
+                margin: 0;
+                font-weight: 700;
+            }
+        }
+
+        .base-#{$breakpoint},
+        .caption-#{$breakpoint},
+        .base-#{$breakpoint}--mono,
+        .caption-#{$breakpoint}--mono {
+            font-weight: 400;
+        }
+
+        .h1-#{$breakpoint},
+        .h2-#{$breakpoint},
+        .caption-#{$breakpoint},
+        .h1-#{$breakpoint}--mono,
+        .h2-#{$breakpoint}--mono,
+        .caption-#{$breakpoint}--mono {
+            line-height: 1.1;
+        }
+
+        .h4-#{$breakpoint},
+        .h5-#{$breakpoint},
+        .base-#{$breakpoint},
+        .h4-#{$breakpoint}--mono,
+        .base-#{$breakpoint}--mono {
+            line-height: 1.4;
+        }
+
+        .h5-#{$breakpoint}--mono {
+            line-height: 1.6;
+        }
+
+        .h1-#{$breakpoint},
+        .h1-#{$breakpoint}--mono {
+            font-size: 4.1875rem;
+        }
+
+        .h2-#{$breakpoint},
+        .h2-#{$breakpoint}--mono {
+            font-size: 3.1875rem;
+        }
+
+        .h3-#{$breakpoint},
+        .h3-#{$breakpoint}--mono {
+            font-size: 2.375rem;
+            line-height: 1.2;
+        }
+
+        .h4-#{$breakpoint},
+        .h4-#{$breakpoint}--mono {
+            font-size: 1.75rem;
+        }
+
+        .h5-#{$breakpoint},
+        .h5-#{$breakpoint}--mono {
+            font-size: 1.375rem;
+        }
+
+        .h6-#{$breakpoint},
+        .h6-#{$breakpoint}--mono {
+            font-size: 1rem;
+        }
+
+        .base-#{$breakpoint},
+        .base-#{$breakpoint}--mono {
+            font-size: 1rem;
+        }
+
+        .caption-#{$breakpoint},
+        .caption-#{$breakpoint}--mono {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+/* Typography mixins: END */

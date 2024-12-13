@@ -24,14 +24,16 @@
 @include generate-default-columns(12);
 @include generate-default-offsets(11);
 
-@each $breakpoint, $settings in var.$breakpoints {
-    $width: nth($settings, 1);
-    $col-count: nth($settings, 2);
-    $gutter: nth($settings, 3);
-
-    @include responsive-container($breakpoint, $width, $gutter);
-    @include generate-columns($breakpoint, $col-count);
-    @include generate-offsets($breakpoint, $col-count - 1);
-    @include display-utilities($breakpoint, none);
-    @include display-utilities($breakpoint, block);
+@each $breakpoint, $breakpoint-width in var.$breakpoints {
+    $setting: map-get(var.$settings, $breakpoint);
+    $col-count: nth($setting, 1);
+    $gutter: nth($setting, 2);
+    
+    @include responsive-container($breakpoint, $breakpoint-width, $gutter);
+    @include generate-columns($breakpoint, $breakpoint-width, $col-count);
+    @include generate-offsets($breakpoint, $breakpoint-width, $col-count - 1);
+    @include display-utilities($breakpoint, $breakpoint-width, none);
+    @include display-utilities($breakpoint, $breakpoint-width, block);
+    @include display-utilities($breakpoint, $breakpoint-width, flex);
+    @include typo-utilities($breakpoint, $breakpoint-width);
 }

@@ -17,35 +17,27 @@ main {
     text-transform: capitalize;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-    margin: 0;
-    font-weight: 600;
+[class*="--mono"] {
+    font-family: var.$font-family--mono;
 }
 
-.h1--mono,
-.h2--mono,
-.h3--mono,
-.h4--mono,
-.h5--mono,
-.h6--mono {
-    margin: 0;
-    font-weight: 700;
+@for $i from 1 through 6 {
+    .h#{$i} {
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .h#{$i}--mono {
+        margin: 0;
+        font-weight: 700;
+    }
 }
 
-.h1--mono,
-.h2--mono,
-.h3--mono,
-.h4--mono,
-.h5--mono,
-.h6--mono,
+.base,
+.caption,
 .base--mono,
 .caption--mono {
-    font-family: var.$font-family-mono;
+    font-weight: 400;
 }
 
 .h1,
@@ -98,13 +90,6 @@ main {
 .h6,
 .h6--mono {
     font-size: 1rem;
-}
-
-.base,
-.caption,
-.base--mono,
-.caption--mono {
-    font-weight: 400;
 }
 
 .base,
