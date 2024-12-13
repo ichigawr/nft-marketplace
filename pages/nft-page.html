@@ -12,27 +12,45 @@
         <header>
             <div class="container">
                 <nav class="d-flex justify-between align-center">
-                    <a href="index.html"
-                        ><img src="../assets/icons/logo.svg" alt="Logo" />
+                    <a href="index.html">
+                        <img src="assets/icons/logo.svg" alt="Logo" />
                     </a>
+
+                    <label for="open-side-bar" class="d-xl-none d-block">
+                        <input
+                            type="checkbox"
+                            name="open-side-bar"
+                            id="open-side-bar"
+                            class="d-none"
+                        />
+
+                        <svg viewBox="0 0 32 32">
+                            <path
+                                class="line line-top-bottom"
+                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                            ></path>
+                            <path class="line" d="M7 16 27 16"></path>
+                        </svg>
+
+                        <div class="overlay"></div>
+                    </label>
 
                     <ul id="header__nav-menu" class="d-flex align-center">
                         <li>
-                            <a href="marketplace.html">Marketplace</a>
+                            <a href="pages/marketplace.html">Marketplace</a>
                         </li>
-                        <li><a href="rankings.html">Rankings</a></li>
+                        <li><a href="pages/rankings.html">Rankings</a></li>
                         <li>
-                            <a href="connect-wallet.html"> Connect a wallet </a>
+                            <a href="pages/connect-wallet.html">
+                                Connect a wallet
+                            </a>
                         </li>
                         <li>
                             <a
-                                href="create-account.html"
+                                href="pages/create-account.html"
                                 class="btn--secondary-1"
                             >
-                                <img
-                                    src="../assets/icons/user.svg"
-                                    alt="User"
-                                />
+                                <img src="assets/icons/user.svg" alt="User" />
                                 <span>Sign Up</span>
                             </a>
                         </li>
