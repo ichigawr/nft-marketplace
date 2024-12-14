@@ -71,16 +71,18 @@
     img {
         width: 24px;
         transition: filter var.$trans-settings;
-
-        &:hover {
-            filter: brightness(3);
-        }
     }
 }
 
 @media screen and (min-width: map-get(var.$containers, xl)) {
     #artist-info {
         flex-direction: row-reverse;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #artist-info__web-links img:hover {
+        filter: brightness(3);
     }
 }
 
