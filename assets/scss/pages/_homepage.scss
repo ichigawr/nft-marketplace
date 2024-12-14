@@ -1,4 +1,5 @@
 @use "../utils/variables" as var;
+@import "../utils/animations";
 
 [class*="artist-card"] {
     img {
@@ -38,6 +39,7 @@
     $info-card-height: 6.8125rem;
 
     aspect-ratio: 1 / 1;
+    animation: floating-img 10s ease-in-out infinite;
 
     > a {
         height: calc(100% - $info-card-height);
@@ -107,7 +109,7 @@
 
 .artist-card {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.25rem;
     position: relative;
     padding: 1.25rem;
     border-radius: var.$border-rad;
@@ -115,7 +117,7 @@
     font-size: 1rem;
 
     img {
-        width: 120px;
+        width: 7.5rem;
     }
 
     p.h5 {
@@ -157,6 +159,41 @@
     }
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .artist-card {
+        position: relative;
+        outline: 0px solid transparent;
+        transition:
+            transform var.$trans-settings,
+            outline var.$trans-settings;
+
+        &::after {
+            content: "More info";
+            position: absolute;
+            top: 100%;
+            padding: 0.3125rem 0.625rem;
+            border-radius: var.$border-rad;
+            transform: translateY(50%);
+            color: var.$text;
+            background: var.$gradient-2;
+            opacity: 0;
+            transition:
+                transform var.$trans-settings,
+                opacity var.$trans-settings;
+        }
+    }
+
+    .artist-card:hover {
+        outline: 2px solid var.$call-to-action;
+        transform: translateY(-5%);
+
+        &::after {
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+    }
+}
+
 /* Top Creators: END */
 
 /* Browse Categories: BEGIN */
@@ -173,17 +210,18 @@
     aspect-ratio: 1 / 1;
     width: 100%;
     border-radius: var.$border-rad var.$border-rad 0px 0px;
-    background-size: 100% auto;
+    background-size: 130% auto;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode: overlay;
 
     div {
-        width: 100%;
-        height: 100%;
         display: grid;
         place-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: var.$border-rad var.$border-rad 0px 0px;
         backdrop-filter: blur(7.5px);
     }
 }
@@ -191,6 +229,32 @@
 @media screen and (max-width: map-get(var.$breakpoints, xl)) {
     .category-card p {
         padding-inline: 1.25rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #browse-categories .row > div {
+        transition: transform var.$trans-settings-2;
+
+        .category-image-wrapper {
+            transition: background-size var.$trans-settings-2;
+
+            div {
+                transition: backdrop-filter var.$trans-settings-2;
+            }
+        }
+    }
+
+    #browse-categories .row > div:hover {
+        transform: scale(1.1);
+
+        .category-image-wrapper {
+            background-size: 100% auto;
+
+            div {
+                backdrop-filter: blur(1px);
+            }
+        }
     }
 }
 

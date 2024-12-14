@@ -79,3 +79,20 @@
         text-align: right;
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .nft-card {
+        transition:
+            transform var.$trans-settings-2,
+            filter var.$trans-settings-2;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: brightness(1) blur(0) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+    }
+
+    .nft-card:hover ~ *, .nft-card:has(~ *:hover) {
+        filter: brightness(0.6) blur(1px) drop-shadow(0 0 10px rgba(255, 255, 255, 0));
+    }
+}

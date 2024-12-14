@@ -36,10 +36,6 @@ footer {
         div {
             gap: 0.625rem;
         }
-
-        img {
-            transition: filter var.$trans-settings;
-        }
     }
 }
 
@@ -71,7 +67,19 @@ footer {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    #footer__info > div img:hover {
-        filter: brightness(3);
+    #footer__info > div img {
+        transition: filter var.$trans-settings;
+
+        &:hover {
+            filter: brightness(3);
+        }
+    }
+
+    #footer__explore a {
+        transition: color var.$trans-settings;
+
+        &:hover {
+            color: var.$text;
+        }
     }
 }

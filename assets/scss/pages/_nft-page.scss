@@ -54,6 +54,7 @@
 #nft-info__details {
     a {
         gap: 0.625rem;
+        width: fit-content;
 
         + a {
             margin-top: 0.625rem;
@@ -63,6 +64,10 @@
 
 #nft-info__tags {
     gap: 1.25rem;
+
+    p {
+        width: 100%;
+    }
 
     button {
         width: fit-content;
@@ -99,6 +104,16 @@
     #nft-info,
     #nft-info__additional {
         gap: 1.25rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #nft-info__details a {
+        transition: filter var.$trans-settings;
+
+        &:hover {
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
     }
 }
 

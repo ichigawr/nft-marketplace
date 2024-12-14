@@ -33,3 +33,17 @@
         left: 100%;
     }
 }
+
+@keyframes floating-img {
+    0% {
+        transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(2%, -2%) scaleY(1) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+    }
+}

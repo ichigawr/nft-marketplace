@@ -1,4 +1,5 @@
 @use "../utils/variables" as var;
+@import "../utils/animations";
 
 header {
     position: sticky;
@@ -114,6 +115,19 @@ header {
 
         li:last-child {
             margin-right: 1.25rem;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #header__nav-menu li:not(:last-child) {
+        transition:
+            transform var.$trans-settings,
+            filter var.$trans-settings;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
         }
     }
 }
