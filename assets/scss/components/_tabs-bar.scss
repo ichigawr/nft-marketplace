@@ -10,11 +10,11 @@
         padding-inline: 1.875rem;
     }
 
-    .h5 {
+    span:first-child {
         color: var.$caption-label-text;
     }
 
-    .base--mono {
+    span + span {
         padding: 0.3125rem 0.625rem;
         border-radius: 20px;
         background-color: var.$background-secondary;
@@ -28,8 +28,14 @@
             color: var.$text;
         }
 
-        .base--mono {
+        span + span {
             background-color: var.$caption-label-text;
         }
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    span:first-child {
+        font-size: 1rem;
     }
 }

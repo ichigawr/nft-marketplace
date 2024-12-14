@@ -33,6 +33,7 @@
     @include generate-columns($breakpoint, $breakpoint-width, $col-count);
     @include generate-offsets($breakpoint, $breakpoint-width, $col-count - 1);
     @include display-utilities($breakpoint, $breakpoint-width, none);
+    @include display-utilities($breakpoint, $breakpoint-width, inline);
     @include display-utilities($breakpoint, $breakpoint-width, block);
     @include display-utilities($breakpoint, $breakpoint-width, flex);
     @include typo-utilities($breakpoint, $breakpoint-width);
