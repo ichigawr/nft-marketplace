@@ -24,15 +24,23 @@
 #nft-info__additional {
     gap: 1.875rem;
     flex: 1 0 0;
+}
 
-    #nft-info__headline p,
-    .h5--mono {
-        color: var.$caption-label-text;
-    }
+#nft-info__headline p {
+    color: var.$caption-label-text;
+}
 
-    .h5--mono {
-        margin-bottom: 0.625rem;
-    }
+#nft-info__created-by > p,
+#nft-info__description > p:first-child,
+#nft-info__details > p,
+#nft-info__tags > p {
+    color: var.$caption-label-text;
+}
+
+#nft-info__created-by > p,
+#nft-info__description > p:first-child,
+#nft-info__details > p {
+    margin-bottom: 0.625rem;
 }
 
 #nft-info__created-by .artist-card--small {
@@ -51,20 +59,23 @@
             margin-top: 0.625rem;
         }
     }
-
-    img {
-        width: 32px;
-    }
 }
 
 #nft-info__tags {
     gap: 1.25rem;
 
     button {
+        width: fit-content;
         padding-inline: 1.875rem;
         border: none;
         background-color: var.$background-secondary;
         text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: map-get(var.$containers, xl)) {
+    #nft-info__details img {
+        width: 32px;
     }
 }
 
@@ -74,20 +85,43 @@
     }
 }
 
+@media screen and (max-width: map-get(var.$containers, xl)) {
+    #nft-info {
+        gap: 1.875rem;
+    }
+
+    #nft-info__tags {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: map-get(var.$containers, md)) {
+    #nft-info,
+    #nft-info__additional {
+        gap: 1.25rem;
+    }
+}
+
 /* NFT Info: END */
 
 /* NFT Cards Section: BEGIN */
 
 #nft-page__nft-cards {
     background-color: var.$background;
-    
+
     .container > .d-flex {
-        gap: 6.25rem;
+        gap: 1.875rem;
         margin-bottom: 3.75rem;
     }
 
     .nft-card__info {
         background-color: var.$background-secondary;
+    }
+}
+
+@media screen and (max-width: map-get(var.$containers, md)) {
+    #nft-page__nft-cards .container > .d-flex {
+        margin-bottom: 2.5rem;
     }
 }
 
