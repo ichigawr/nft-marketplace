@@ -1,7 +1,5 @@
 @use "../utils/variables" as var;
 
-$header-height: 100px;
-
 header {
     position: sticky;
     top: 0;
@@ -9,7 +7,7 @@ header {
     z-index: 20;
     width: 100%;
     height: fit-content;
-    padding-block: 15px;
+    padding-block: 0.9375rem;
     background-color: var.$background;
     border-bottom: 1px solid var.$caption-label-text;
     transition:
@@ -17,12 +15,7 @@ header {
         padding-block var.$trans-settings;
 
     &.scrolled {
-        padding-block: 5px;
-    }
-
-    .container,
-    nav {
-        height: 100%;
+        padding-block: 0.3125rem;
     }
 
     label {
@@ -34,14 +27,14 @@ header {
     gap: 10px;
 
     a {
-        padding: 12px 20px;
-        font-size: 16px;
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
         font-weight: 600;
         line-height: 1.4;
     }
 
     .btn--secondary-1 {
-        padding-inline: 30px;
+        padding-inline: 1.875rem;
     }
 }
 
@@ -60,16 +53,22 @@ header {
 
 @media screen and (min-width: map-get(var.$breakpoints, xl)) {
     header {
-        padding-block: 20px;
+        padding-block: 1.25rem;
     }
 }
 
 @media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    $margin-from-edge: 1.2vh;
+
+    header img[alt="Logo"] {
+        height: 24px;
+    }
+
     header:has(#open-side-bar:checked) {
         label svg {
             position: fixed;
-            top: 3.5vh;
-            right: 0.9375rem;
+            top: calc($margin-from-edge + 3.8vh);
+            right: calc($margin-from-edge + 0.9375rem);
             z-index: 50;
         }
 
@@ -89,12 +88,12 @@ header {
         align-items: flex-end;
         gap: 0;
         position: fixed;
-        right: 0;
-        top: 0;
+        top: $margin-from-edge;
+        bottom: $margin-from-edge;
+        right: $margin-from-edge;
         z-index: 40;
-        height: 100vh;
-        padding: 10vh 0 0;
-        border-radius: var.$border-rad 0 0 var.$border-rad;
+        padding-top: 8vh;
+        border-radius: var.$border-rad;
         opacity: 0;
         transform: translateX(100%);
         transition:
@@ -102,7 +101,8 @@ header {
             opacity var.$trans-settings;
         background-color: var.$background;
 
-        li:not(:last-child), a:not(.btn--secondary-1) {
+        li:not(:last-child),
+        a:not(.btn--secondary-1) {
             width: 100%;
             text-align: right;
         }
@@ -112,7 +112,7 @@ header {
             padding: 0.9375rem 1.875rem;
         }
 
-        .btn--secondary-1 {
+        li:last-child {
             margin-right: 1.25rem;
         }
     }
@@ -120,7 +120,7 @@ header {
 
 /* Open Side Bar Toggle Button: BEGIN */
 
-header label {    
+header label {
     svg {
         height: 24px;
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
