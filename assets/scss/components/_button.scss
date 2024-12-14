@@ -119,4 +119,8 @@
             opacity: 0;
         }
     }
+
+    [class*="btn--"].fly-2:has(img, span):hover img {
+        animation-name: fly-2;
+    }
 }
