@@ -36,7 +36,8 @@ main {
 .base,
 .caption,
 .base--mono,
-.caption--mono {
+.caption--mono,
+.body-text {
     font-weight: 400;
 }
 
@@ -57,7 +58,8 @@ main {
     line-height: 1.4;
 }
 
-.h5--mono {
+.h5--mono,
+.body-text {
     line-height: 1.6;
 }
 
@@ -83,7 +85,8 @@ main {
 }
 
 .h5,
-.h5--mono {
+.h5--mono,
+.body-text {
     font-size: 1.375rem;
 }
 

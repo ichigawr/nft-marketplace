@@ -1,9 +1,5 @@
 @use "../utils/variables" as var;
 
-section {
-    padding-block: 5rem;
-}
-
 [class*="artist-card"] {
     img {
         border-radius: 50%;
@@ -12,11 +8,17 @@ section {
 
 .section-headline {
     align-items: flex-end;
-    gap: 100px;
+    gap: 2.5rem;
     margin-bottom: 3.75rem;
 
     h2 {
         margin-bottom: 0.625rem;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, md)) {
+    .section-headline {
+        flex-wrap: wrap;
     }
 }
 
@@ -56,6 +58,12 @@ section {
     }
 }
 
+@media screen and (min-width: map-get(var.$breakpoints, xl)) {
+    #hero__info__additional .base {
+        font-size: 1.5rem;
+    }
+}
+
 /* Hero: END */
 
 /* Trending Collection: BEGIN */
@@ -84,6 +92,12 @@ section {
     .btn--primary-1 {
         height: 100px;
         padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, md)) {
+    .artist-card img {
+        width: 60px;
     }
 }
 
@@ -131,9 +145,15 @@ section {
     color: var.$caption-label-text;
 }
 
-@media screen and (min-width: map-get(var.$containers, xl)) {
+@media screen and (min-width: map-get(var.$breakpoints, xl)) {
     .artist-card p.h5 {
         text-align: center;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    .artist-card img {
+        width: 60px;
     }
 }
 
@@ -168,6 +188,12 @@ section {
     }
 }
 
+@media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    .category-card p {
+        padding-inline: 1.25rem;
+    }
+}
+
 /* Browse Categories: END */
 
 /* Discover More NFTs: BEGIN */
@@ -188,10 +214,14 @@ section {
 
 #nft-highlight {
     align-items: flex-end;
-    padding: 22.5rem 7.1875rem 3.75rem;
+    padding-block: 22.5rem 3.75rem;
     background:
         linear-gradient(180deg, #0000 0%, #9747ff 100%),
         url(../images/magic-mushroom-0324.png) lightgray 50% / cover no-repeat;
+
+    > .container {
+        row-gap: 1.875rem;
+    }
 }
 
 #nft-highlight__info {
@@ -210,6 +240,12 @@ section {
         border-color: $btn-color;
         background-color: $btn-color;
         color: var.$background;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, md)) {
+    #nft-highlight {
+        padding-block: 7.5rem 2.5rem;
     }
 }
 
@@ -244,7 +280,7 @@ section {
     }
 }
 
-@media screen and (min-width: nth(map-get(var.$breakpoints, md), 1)) {
+@media screen and (min-width: map-get(var.$breakpoints, md)) {
     .how-it-works__info-card {
         gap: 1.25rem;
     }
@@ -254,11 +290,42 @@ section {
     }
 }
 
+@media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    .how-it-works__info-card {
+        img {
+            width: 10rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, md)) {
+    .how-it-works__info-card {
+        justify-content: space-between;
+        padding: 1.25rem;
+
+        .card-details {
+            width: 9.6875rem;
+        }
+
+        img {
+            width: 6.25rem;
+        }
+    }
+}
+
 /* How It Works: END */
 
 /* Subscribe Widget: BEGIN */
 
-#subscribe-widget {
+#subscribe-widget > div {
     gap: 5rem;
     margin-block: 2.5rem 5rem;
     padding: 3.75rem;
@@ -276,6 +343,29 @@ section {
     > img {
         height: 19.375rem;
         object-fit: cover;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, xl)) {
+    #subscribe-widget > div {
+        gap: 1.875rem;
+    }
+}
+
+@media screen and (min-width: map-get(var.$breakpoints, md)) and (max-width: map-get(var.$breakpoints, xl)) {
+    #subscribe-widget .subscribe-form {
+        margin-left: 1.25rem;
+    }
+}
+
+@media screen and (max-width: map-get(var.$breakpoints, md)) {
+    #subscribe-widget > div {
+        padding: 0;
+        background-color: unset;
+
+        > img {
+            height: 15.9375rem;
+        }
     }
 }
 

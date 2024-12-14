@@ -36,6 +36,10 @@ footer {
         div {
             gap: 0.625rem;
         }
+
+        img {
+            transition: filter var.$trans-settings;
+        }
     }
 }
 
@@ -63,5 +67,11 @@ footer {
 
     #footer__subscribe {
         margin-left: calc(-0.75 * var(--gutter));
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #footer__info > div img:hover {
+        filter: brightness(3);
     }
 }

@@ -8,7 +8,8 @@ $call-to-action: #A259FF;
 $gradient-1: linear-gradient(101deg, #A259FF 13.57%, #FF6250 97.65%);
 $gradient-2: linear-gradient(128deg, #A259FF 49.75%, #377DF7 136.56%);
 
-$trans-settings: ease 0.3s;
+$trans-settings: 0.3s ease;
+$trans-settings-2: 0.3s ease-in-out;
 
 $font-family: "Work Sans", sans-serif;
 $font-family--mono: "Space Mono", monospace;

@@ -22,14 +22,22 @@
     align-items: center;
 }
 
+.align-end {
+    align-items: flex-end;
+}
+
 .f-wrap {
     flex-wrap: wrap;
 }
 
+.f-nowrap {
+    flex-wrap: nowrap !important;
+}
+
 .d-block {
-    display: block;
+    display: block !important;
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
