@@ -78,7 +78,8 @@
     }
 
     > a img {
-        height: 330px;
+        aspect-ratio: 1 / 1;
+        width: 100%;
     }
 
     h3 {
@@ -87,19 +88,27 @@
 }
 
 .additional-cards {
+    gap: 0.9375rem;
+
     img {
-        height: 100px;
+        height: 6.25rem;
     }
 
     .btn--primary-1 {
-        height: 100px;
-        padding: 0 15px;
+        height: 100%;
+        padding: 0 0.9375rem;
     }
 }
 
 @media screen and (max-width: map-get(var.$breakpoints, md)) {
-    .artist-card img {
-        width: 60px;
+    .additional-cards {
+        img {
+            height: 5.9375rem;
+        }
+
+        .btn--primary-1 {
+            font-size: 1rem;
+        }
     }
 }
 

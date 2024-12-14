@@ -1644,9 +1644,6 @@ header {
 header.scrolled {
   padding-block: 0.3125rem;
 }
-header label {
-  font-size: 0;
-}
 
 #header__nav-menu {
   gap: 10px;
@@ -1737,9 +1734,13 @@ header label {
   }
 }
 /* Open Side Bar Toggle Button: BEGIN */
+header label {
+  font-size: 0;
+}
 header label svg {
   height: 24px;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 header label .line {
   fill: none;
@@ -2313,23 +2314,30 @@ footer hr {
   border-radius: 20px;
 }
 .trending-collection__card > a img {
-  height: 330px;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .trending-collection__card h3 {
   line-height: 1.4;
 }
 
+.additional-cards {
+  gap: 0.9375rem;
+}
 .additional-cards img {
-  height: 100px;
+  height: 6.25rem;
 }
 .additional-cards .btn--primary-1 {
-  height: 100px;
-  padding: 0 15px;
+  height: 100%;
+  padding: 0 0.9375rem;
 }
 
 @media screen and (max-width: 833.98px) {
-  .artist-card img {
-    width: 60px;
+  .additional-cards img {
+    height: 5.9375rem;
+  }
+  .additional-cards .btn--primary-1 {
+    font-size: 1rem;
   }
 }
 /* Trending Collection: END */
