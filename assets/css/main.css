@@ -2324,18 +2324,20 @@ footer hr {
 .additional-cards {
   gap: 0.9375rem;
 }
+.additional-cards a {
+  flex: 1 0 0;
+}
 .additional-cards img {
-  height: 6.25rem;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .additional-cards .btn--primary-1 {
+  width: 100%;
   height: 100%;
-  padding: 0 0.9375rem;
+  padding: 0;
 }
 
 @media screen and (max-width: 833.98px) {
-  .additional-cards img {
-    height: 5.9375rem;
-  }
   .additional-cards .btn--primary-1 {
     font-size: 1rem;
   }
