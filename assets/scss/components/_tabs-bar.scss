@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: map-get(var.$breakpoints, xl)) {
-    span:first-child {
+    .tabs-bar span:first-child {
         font-size: 1rem;
     }
 }
