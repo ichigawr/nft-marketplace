@@ -20,10 +20,12 @@ body {
 
 section {
     padding-block: 5rem;
-}
 
-@media screen and (max-width: map-get(var.$breakpoints, xl)) {
-    section {
+    @media screen and (max-width: map-get(var.$breakpoints, xl)) {
+        padding-block: 3.75rem;
+    }
+
+    @media screen and (max-width: map-get(var.$breakpoints, md)) {
         padding-block: 2.5rem;
     }
 }
