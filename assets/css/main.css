@@ -52,6 +52,16 @@
     transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
   }
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 .d-flex {
   display: flex;
 }
@@ -415,6 +425,56 @@ template {
   --text: #fff;
 }
 
+@keyframes fly {
+  from {
+    transform: translate(-50%, 0.1em) scale(1.1);
+  }
+  to {
+    transform: translate(-50%, -0.1em) scale(1.1);
+  }
+}
+@keyframes fly-2 {
+  from {
+    transform: translate(-50%, 0.1em) rotate(45deg) scale(1.1);
+  }
+  to {
+    transform: translate(-50%, -0.1em) rotate(45deg) scale(1.1);
+  }
+}
+@keyframes stale-cheetah {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+@keyframes floating-img {
+  0% {
+    transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+  }
+  50% {
+    transform: translate(2%, -2%) scaleY(1) rotate(5deg);
+  }
+  100% {
+    transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 *,
 *::before,
 *::after {
@@ -426,11 +486,14 @@ template {
 }
 
 body {
-  overflow-x: hidden;
+  background-color: #2B2B2B;
+  overscroll-behavior: none;
 }
 
-body {
-  background-color: #2B2B2B;
+main > * {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 35%;
 }
 
 section {
@@ -1628,6 +1691,16 @@ p[class^=h] {
     transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
   }
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 header {
   position: sticky;
   top: 0;
@@ -1886,6 +1959,16 @@ footer hr {
     transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
   }
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 [class*=btn--] {
   display: inline-flex;
   justify-content: center;
@@ -1897,6 +1980,9 @@ footer hr {
   background-color: transparent;
   text-align: center;
   white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 [class*=btn--] img {
   width: 20px;
@@ -2251,6 +2337,16 @@ footer hr {
   }
   100% {
     transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
 [class*=artist-card] img {
